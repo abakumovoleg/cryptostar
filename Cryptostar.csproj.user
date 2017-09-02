@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>G:\Program Files\Microsoft Office\Office14\excel.exe</StartProgram>
+    <StartArguments>Cryptostar-AddIn64-packed.xll</StartArguments>
+    <StartWorkingDirectory>G:\dev\projects\Cryptostar\Cryptostar\bin\Debug</StartWorkingDirectory>
+  </PropertyGroup>
+</Project>

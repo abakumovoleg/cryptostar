@@ -1,0 +1,5 @@
+<DnaLibrary Name="Cryptostar Add-In" RuntimeVersion="v4.0">
+  <ExternalLibrary Path="Cryptostar.dll" ExplicitExports="false" LoadFromBytes="true" Pack="true" />
+  <Reference Path="Newtonsoft.Json.dll" ExplicitExports="false" LoadFromBytes="true" Pack="true" />  
+  <Image Name="bitcoin" Path="bitcoin.png" Pack="true" /> 
+</DnaLibrary>
