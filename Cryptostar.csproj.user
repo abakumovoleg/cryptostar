@@ -4,6 +4,6 @@
     <StartAction>Program</StartAction>
     <StartProgram>G:\Program Files\Microsoft Office\Office14\excel.exe</StartProgram>
     <StartArguments>Cryptostar-AddIn64-packed.xll</StartArguments>
-    <StartWorkingDirectory>G:\dev\projects\Cryptostar\Cryptostar\bin\Debug</StartWorkingDirectory>
+    <StartWorkingDirectory>G:\dev\projects\cryptostar_gh\bin\Debug\</StartWorkingDirectory>
   </PropertyGroup>
 </Project>

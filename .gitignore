@@ -3,3 +3,8 @@
 ################################################################################
 
 /obj/Debug
+/packages
+/.vs/Cryptostar/v15
+/.vs/Cryptostar/v15/.suo
+*.suo
+/bin/Debug

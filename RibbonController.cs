@@ -1,6 +1,5 @@
 ﻿using System;
 using ExcelDna.Integration;
-using Microsoft.Office.Interop.Excel;
 using ExcelDna.Integration.CustomUI;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;

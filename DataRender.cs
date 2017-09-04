@@ -1,10 +1,5 @@
-﻿using ExcelDna.Integration;
-using Microsoft.Office.Interop.Excel;
-using System;
-using System.Collections.Generic;
+﻿using ExcelDna.Integration; 
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cryptostar
 {
@@ -12,9 +7,9 @@ namespace Cryptostar
     {
         public void RenderData(Ticker[] tickers)
         {
-            Application xlApp =  (Application)ExcelDnaUtil.Application;
+            dynamic xlApp =  ExcelDnaUtil.Application;
             
-            Worksheet ws = xlApp.ActiveSheet as Worksheet;
+            var ws = xlApp.ActiveSheet;
 
             if (ws == null)
                 return;
@@ -74,15 +69,15 @@ namespace Cryptostar
         }
 
 
-        private string UnifyFormatString(string format, Application xlApp)
+        private string UnifyFormatString(string format, dynamic xlApp)
         {
-            var yearCode = xlApp.International[XlApplicationInternational.xlYearCode];
-            var monthCode = xlApp.International[XlApplicationInternational.xlMonthCode];
-            var dayCode = xlApp.International[XlApplicationInternational.xlDayCode];
+            var yearCode = xlApp.International[Constants.xlYearCode];
+            var monthCode = xlApp.International[Constants.xlMonthCode];
+            var dayCode = xlApp.International[Constants.xlDayCode];
 
-            var hourCode = xlApp.International[XlApplicationInternational.xlHourCode];
-            var minuteCode = xlApp.International[XlApplicationInternational.xlMinuteCode];
-            var secondCode = xlApp.International[XlApplicationInternational.xlSecondCode];
+            var hourCode = xlApp.International[Constants.xlHourCode];
+            var minuteCode = xlApp.International[Constants.xlMinuteCode];
+            var secondCode = xlApp.International[Constants.xlSecondCode];
              
             return format.Replace("M", monthCode)
                             .Replace("y", yearCode)
@@ -91,5 +86,15 @@ namespace Cryptostar
                             .Replace("m", minuteCode)
                             .Replace("H", hourCode);
         }
+    }
+
+    public class Constants
+    {
+        public const int xlYearCode = 19;
+        public const int xlMonthCode = 20;
+        public const int xlDayCode = 21;
+        public const int xlMinuteCode = 23;
+        public const int xlSecondCode = 24;
+        public const int xlHourCode = 22;
     }
 }
